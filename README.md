@@ -47,3 +47,8 @@ pvp, chest-access, mob-spawning, use, tnt, liquid-flow
 ### Файлы
 - `config.yml` — лимиты и размеры
 - `data.yml` — сохранённые приваты
+
+## 📧 Контакты
+- Discord: [вставить ссылку]
+- Почта: Filinworld.srv@gmail.com
+- ВК: [вставить ссылку]
