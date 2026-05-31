@@ -1,0 +1,4 @@
+settings:
+  max-claims-per-player: 3
+  default-claim-size: 10000
+  claim-block-limit: 50000

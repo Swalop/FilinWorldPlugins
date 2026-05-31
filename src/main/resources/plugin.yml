@@ -1,5 +1,5 @@
 name: FilinPrivates
-version: 1.0.0
+version: 1.0.3
 main: ru.filinworld.plugin.FilinPrivates
 api-version: 1.16
 author: The_Swalop "Команда FilinWorld"
@@ -7,5 +7,5 @@ description: Система приватов Filin World
 
 commands:
   rg:
-    description: Команда для управления приватами
-    usage: /rg <claim|add|remove|info>
+    description: Управление приватами
+    usage: /rg <claim|add|addowner|remove|delete|info|list|flags|flag|up|down|menu|config|help>
