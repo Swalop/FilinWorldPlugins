@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" width="200" alt="FilinPrivates">
+</p>
+
 # FilinPrivates
 
 Система приватных территорий для Filin World (Paper 1.16.5).
