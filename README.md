@@ -2,8 +2,10 @@
 
 Система приватных территорий для Filin World (Paper 1.16.5).
 
-## v1.0.3
+## v1.0.4
+- Исправлено сохранение приватов — данные записываются мгновенно при создании/удалении
 
+## v1.0.3
 ### Новое
 - GUI-меню `/rg menu` — список приватов, телепорт, удаление
 - Интеграция с WorldGuard — создание, удаление, флаги настоящих WG-регионов
@@ -33,7 +35,7 @@
 pvp, chest-access, mob-spawning, use, tnt, liquid-flow
 
 ### Права LuckPerms
-- `filinprivates.admin` — `/rg flag`, `/rg config reload`
+`filinprivates.admin` — `/rg flag`, `/rg config reload`
 
 ### Инструмент
 Деревянная мотыга: ПКМ — точка 1, ЛКМ — точка 2
@@ -41,14 +43,3 @@ pvp, chest-access, mob-spawning, use, tnt, liquid-flow
 ### Файлы
 - `config.yml` — лимиты и размеры
 - `data.yml` — сохранённые приваты
-
----
-
-## v1.0.2
-- Выделение мотыгой, флаги, config.yml, защита блоков
-
-## v1.0.1
-- Со-владельцы, проверка пересечений
-
-## v1.0.0
-- Базовая команда /rg claim, сохранение в data.yml
