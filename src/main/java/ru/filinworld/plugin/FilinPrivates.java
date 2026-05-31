@@ -111,7 +111,11 @@ public class FilinPrivates extends JavaPlugin {
         getLogger().info("Загружено приватов: " + ClaimCommand.regionOwners.size());
     }
 
-    private void saveRegions() {
+    public void saveRegionsNow() {
+        saveRegions();
+    }
+
+    public void saveRegions() {
         if (dataConfig == null) return;
         for (String key : dataConfig.getKeys(false)) dataConfig.set(key, null);
 

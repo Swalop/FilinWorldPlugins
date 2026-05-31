@@ -170,6 +170,7 @@ public class ClaimCommand implements CommandExecutor {
             WorldGuardHook.createRegion(name, bounds);
 
         p.sendMessage("§aПриват §e" + name + " §aсоздан! (" + size + " бл, Y:" + y1 + "-" + y2 + ")");
+        FilinPrivates.getInstance().saveRegionsNow();
         return true;
     }
 
