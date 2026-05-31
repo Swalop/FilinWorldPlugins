@@ -49,6 +49,6 @@ pvp, chest-access, mob-spawning, use, tnt, liquid-flow
 - `data.yml` — сохранённые приваты
 
 ## 📧 Контакты
-- Discord: [вставить ссылку]
+- Discord: https://discord.gg/qsRc9V5SYE
 - Почта: Filinworld.srv@gmail.com
-- ВК: [вставить ссылку]
+- ВК: https://vk.com/swalop08
