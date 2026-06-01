@@ -27,6 +27,7 @@ database:
   database: filin        # название базы
   user: root             # пользователь
   password: 'твой_пароль' # пароль
+  ```
 
 Система приватных территорий для Filin World (Paper 1.16.5).
 
