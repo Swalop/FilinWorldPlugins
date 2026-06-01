@@ -57,6 +57,7 @@ database:
 | `/rg flags` | Список доступных флагов |
 | `/rg flag <флаг> <on/off>` | Установить флаг (ADMIN+) |
 | `/rg config reload` | Перезагрузить config.yml (ADMIN+) |
+| `/rg kick` | Выгнать игрока с своего привата (ADMIN+) |
 | `/rg help` | Подробная справка |
 
 ### Флаги
