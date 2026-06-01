@@ -15,16 +15,36 @@ public class MenuListener implements Listener {
         e.setCancelled(true);
         Player p = (Player) e.getWhoClicked();
         ItemStack item = e.getCurrentItem();
-        if (item == null || !item.hasItemMeta()) return;
+        if (item == null || !item.hasItemMeta() || !item.getItemMeta().hasDisplayName()) return;
         String name = item.getItemMeta().getDisplayName().replace("§e", "");
+
         if (name.equals("Инфо")) return;
+
         if (ClaimCommand.regionOwners.containsKey(name)) {
-            if (e.isLeftClick()) {
-                Object[] b = ClaimCommand.regionBounds.get(name);
-                p.teleport(new Location(Bukkit.getWorld((String)b[6]),
-                        ((int)b[0]+(int)b[2])/2.0, (int)b[5]+1, ((int)b[1]+(int)b[3])/2.0));
-                p.sendMessage("§aТП в " + name);
+            Object[] b = ClaimCommand.regionBounds.get(name);
+
+            // Shift+ЛКМ — добавить игрока
+            if (e.isShiftClick() && e.isLeftClick()) {
+                p.closeInventory();
+                p.sendMessage("§aВведите в чат ник игрока для добавления в приват §e" + name);
+                p.sendMessage("§7Или используйте: §e/rg add <ник>");
+                return;
             }
+
+            // Shift+ПКМ — убрать игрока
+            if (e.isShiftClick() && e.isRightClick()) {
+                p.closeInventory();
+                p.sendMessage("§cВведите в чат ник игрока для удаления из привата §e" + name);
+                p.sendMessage("§7Или используйте: §e/rg remove <ник>");
+                return;
+            }
+
+            // ЛКМ — телепорт
+            if (e.isLeftClick()) {
+                ClaimCommand.safeTeleport(p, name);
+            }
+
+            // ПКМ — удалить
             if (e.isRightClick()) {
                 p.closeInventory();
                 p.performCommand("rg delete " + name);

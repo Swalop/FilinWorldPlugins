@@ -39,11 +39,10 @@ public class ParticleListener implements Listener {
 
     private void showBorder(Player p, int x1, int z1, int x2, int z2, int yMin, int yMax, String worldName) {
         if (!p.getWorld().getName().equals(worldName)) return;
-        Location loc = p.getLocation();
-        int py = loc.getBlockY();
+        int py = p.getLocation().getBlockY();
 
-        // Вертикальные линии по углам
-        for (int y = yMin; y <= yMax; y += 2) {
+        // Только углы по вертикали
+        for (int y = yMin; y <= yMax; y += 5) {
             if (Math.abs(y - py) > 15) continue;
             spawnParticle(p, x1, y, z1);
             spawnParticle(p, x2, y, z1);
@@ -51,18 +50,10 @@ public class ParticleListener implements Listener {
             spawnParticle(p, x2, y, z2);
         }
 
-        // Горизонтальные линии
+        // Горизонтальные углы на уровне игрока
         int showY = Math.max(yMin, Math.min(yMax, py));
-        for (int x = x1; x <= x2; x += 2) {
-            if (Math.abs(x - loc.getBlockX()) > 20) continue;
-            spawnParticle(p, x, showY, z1);
-            spawnParticle(p, x, showY, z2);
-        }
-        for (int z = z1; z <= z2; z += 2) {
-            if (Math.abs(z - loc.getBlockZ()) > 20) continue;
-            spawnParticle(p, x1, showY, z);
-            spawnParticle(p, x2, showY, z);
-        }
+        spawnParticle(p, x1, showY, z1);
+        spawnParticle(p, x2, showY, z2);
     }
 
     private void spawnParticle(Player p, int x, int y, int z) {
